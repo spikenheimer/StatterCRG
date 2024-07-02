@@ -43,6 +43,8 @@ public struct Fielding<P:PathSpecified> : PathNodeId, Identifiable {
 
     @Leaf public var skater: UUID?
 
+    @Leaf public var skaterNumber: String?
+
     public init(parent: P) {
         self.parent = parent
         statePath = parent.adding("Fielding")
@@ -61,6 +63,7 @@ public struct Fielding<P:PathSpecified> : PathNodeId, Identifiable {
         _readonly = parent.leaf("Readonly").immutable
         _sitFor3 = parent.leaf("SitFor3")
         _skater = parent.leaf("Skater")
+        _skaterNumber = parent.leaf("SkaterNumber")
         _annotation.parentPath = statePath
         _boxTripSymbols.parentPath = statePath
         _boxTripSymbolsAfterSP.parentPath = statePath
@@ -75,6 +78,7 @@ public struct Fielding<P:PathSpecified> : PathNodeId, Identifiable {
         _readonly.parentPath = statePath
         _sitFor3.parentPath = statePath
         _skater.parentPath = statePath
+        _skaterNumber.parentPath = statePath
     }
     public init(parent: P, statePath: StatePath) {
         self.parent = parent
@@ -93,6 +97,7 @@ public struct Fielding<P:PathSpecified> : PathNodeId, Identifiable {
         _readonly = parent.leaf("Readonly").immutable
         _sitFor3 = parent.leaf("SitFor3")
         _skater = parent.leaf("Skater")
+        _skaterNumber = parent.leaf("SkaterNumber")
         _annotation.parentPath = statePath
         _boxTripSymbols.parentPath = statePath
         _boxTripSymbolsAfterSP.parentPath = statePath
@@ -107,6 +112,7 @@ public struct Fielding<P:PathSpecified> : PathNodeId, Identifiable {
         _readonly.parentPath = statePath
         _sitFor3.parentPath = statePath
         _skater.parentPath = statePath
+        _skaterNumber.parentPath = statePath
     }
 }
 extension Jam {
