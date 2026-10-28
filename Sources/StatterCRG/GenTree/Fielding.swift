@@ -63,7 +63,7 @@ public struct Fielding<P:PathSpecified> : PathNodeId, Identifiable {
         _readonly = parent.leaf("Readonly").immutable
         _sitFor3 = parent.leaf("SitFor3")
         _skater = parent.leaf("Skater")
-        _skaterNumber = parent.leaf("SkaterNumber")
+        _skaterNumber = parent.leaf("skaterNumber")
         _annotation.parentPath = statePath
         _boxTripSymbols.parentPath = statePath
         _boxTripSymbolsAfterSP.parentPath = statePath
@@ -97,7 +97,7 @@ public struct Fielding<P:PathSpecified> : PathNodeId, Identifiable {
         _readonly = parent.leaf("Readonly").immutable
         _sitFor3 = parent.leaf("SitFor3")
         _skater = parent.leaf("Skater")
-        _skaterNumber = parent.leaf("SkaterNumber")
+        _skaterNumber = parent.leaf("skaterNumber")
         _annotation.parentPath = statePath
         _boxTripSymbols.parentPath = statePath
         _boxTripSymbolsAfterSP.parentPath = statePath
