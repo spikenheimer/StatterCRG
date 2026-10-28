@@ -165,8 +165,8 @@ node Game ScoreBoard {
     var AbortReason : String
     var Ruleset : UUID
     let RulesetName : String
-    var HeadNso : UUID
-    var HeadRef : UUID
+    var HNSO : UUID
+    var HR : UUID
     var SuspensionsServed : String
     var ClockDuringFinalScore : Bool
 
@@ -338,6 +338,7 @@ node Fielding <Jam TeamJam> {
     let Readonly : Bool
     var SitFor3 : Bool
     var Skater : UUID
+    var skaterNumber: String
 }
 
 node ScoringTrip  <Jam TeamJam> {
@@ -591,7 +592,8 @@ node Settings ScoreBoard {
 }
 
 
-@parent(Game) node Official <Game.Nso Game.Ref> {
+//node Official Game <Game.Nso Game.Ref> {
+node Nso Game  {
     key UUID
     @name(Id) let officialId : UUID
     let Readonly : Bool
@@ -603,6 +605,17 @@ node Settings ScoreBoard {
     var Swap : Bool
 }
 
+node Ref Game  {
+    key UUID
+    @name(Id) let officialId : UUID
+    let Readonly : Bool
+    var Role : String
+    var Name : String
+    var League : String
+    var Cert : String
+    var P1Team : UUID
+    var Swap : Bool
+}
 
 node PreparedTeam ScoreBoard {
     key UUID
