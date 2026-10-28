@@ -31,7 +31,7 @@ public struct TimedEvent {
 
 public extension Game {
     // Gather
-    var timedEvents: [TimedEvent] {
+var timedEvents: [TimedEvent] {
         var retval = [TimedEvent]()
         for penalty in allPenalties.values {
             if let time = penalty.2.time {
@@ -41,7 +41,7 @@ public extension Game {
         for periodNum in 1 ... 2 {
             let period = self.period(periodNum)
             if let time = period.walltimeStart {
-                retval.append(.init(time: time, event: .periodEnd(period)))
+                retval.append(.init(time: time, event: .periodStart(period)))
             }
             if let time = period.walltimeEnd {
                 retval.append(.init(time: time, event: .periodEnd(period)))
