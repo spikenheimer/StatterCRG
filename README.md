@@ -1,5 +1,16 @@
 # StatterCRG
 
+#### Update : changes from original StatterCRG
+    - updated for 2025.x changes
+    - corrections for json changes
+        - added Nso / Official nodes
+
+see also my <https://gitlab.com/derbyos/SpikeBook> project
+
+-spike
+
+    
+## REAMDE
 A stand alone Swift package that talks with the
 CRG Scoreboard (assuming version 2023.0 or newer)
 
