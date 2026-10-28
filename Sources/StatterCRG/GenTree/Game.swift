@@ -81,9 +81,9 @@ public struct Game : PathNodeId, Identifiable {
 
     @ImmutableLeaf public var rulesetName: String?
 
-    @Leaf public var headNso: UUID?
+    @Leaf public var hNSO: UUID?
 
-    @Leaf public var headRef: UUID?
+    @Leaf public var hR: UUID?
 
     @Leaf public var suspensionsServed: String?
 
@@ -156,8 +156,8 @@ public struct Game : PathNodeId, Identifiable {
         _abortReason = parent.leaf("AbortReason")
         _ruleset = parent.leaf("Ruleset")
         _rulesetName = parent.leaf("RulesetName").immutable
-        _headNso = parent.leaf("HeadNso")
-        _headRef = parent.leaf("HeadRef")
+        _hNSO = parent.leaf("HNSO")
+        _hR = parent.leaf("HR")
         _suspensionsServed = parent.leaf("SuspensionsServed")
         _clockDuringFinalScore = parent.leaf("ClockDuringFinalScore")
         _updateInProgress = parent.leaf("UpdateInProgress").immutable
@@ -187,8 +187,8 @@ public struct Game : PathNodeId, Identifiable {
         _abortReason.parentPath = statePath
         _ruleset.parentPath = statePath
         _rulesetName.parentPath = statePath
-        _headNso.parentPath = statePath
-        _headRef.parentPath = statePath
+        _hNSO.parentPath = statePath
+        _hR.parentPath = statePath
         _suspensionsServed.parentPath = statePath
         _clockDuringFinalScore.parentPath = statePath
         _updateInProgress.parentPath = statePath
@@ -222,8 +222,8 @@ public struct Game : PathNodeId, Identifiable {
         _abortReason = parent.leaf("AbortReason")
         _ruleset = parent.leaf("Ruleset")
         _rulesetName = parent.leaf("RulesetName").immutable
-        _headNso = parent.leaf("HeadNso")
-        _headRef = parent.leaf("HeadRef")
+        _hNSO = parent.leaf("HNSO")
+        _hR = parent.leaf("HR")
         _suspensionsServed = parent.leaf("SuspensionsServed")
         _clockDuringFinalScore = parent.leaf("ClockDuringFinalScore")
         _updateInProgress = parent.leaf("UpdateInProgress").immutable
@@ -253,8 +253,8 @@ public struct Game : PathNodeId, Identifiable {
         _abortReason.parentPath = statePath
         _ruleset.parentPath = statePath
         _rulesetName.parentPath = statePath
-        _headNso.parentPath = statePath
-        _headRef.parentPath = statePath
+        _hNSO.parentPath = statePath
+        _hR.parentPath = statePath
         _suspensionsServed.parentPath = statePath
         _clockDuringFinalScore.parentPath = statePath
         _updateInProgress.parentPath = statePath
